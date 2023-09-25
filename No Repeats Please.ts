@@ -8,7 +8,7 @@ For example, aab should return 2 because it has 6 total permutations (aab, aab, 
 
 
 function permAlone(param) {
-  
+  if(param.length ==1) return 1
 
     const param_array = param.split("")
     const paramLength = param.length
@@ -31,7 +31,6 @@ function permAlone(param) {
       return parseInt(el)
     })
     const goodNumber = []
-    console.log(max)
     for (let i= 0 ;i<max;i++){
       const i_string = i.toString()
       const i_array = i_string.split("")
@@ -54,7 +53,6 @@ function permAlone(param) {
     const toWords =  toChars.map(el=>{
       return el = el.join("")
     })
-    
     const fitred = toWords.filter(el=>{
       var valid = true
       for(var i = 0 ;i<el.length-1;i++){
@@ -62,9 +60,9 @@ function permAlone(param) {
       }
       if(valid) return el
     })
-    console.log(fitred.length)
+    console.log('333333',fitred.length)
     return(fitred.length)
     
     }
     
-    permAlone('aab');
+    permAlone("zzzzzzzz");
